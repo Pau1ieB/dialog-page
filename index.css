@@ -1,0 +1,142 @@
+:root{
+    --dn-green:#89c82e;
+    --dn-grey:#3c3c3b;
+    /* --dn-pink:rgb(112, 0, 100); */
+    --dn-pink:rgb(231,0,100);
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    font-size: 10px;
+    font-size: 1.8rem;
+    font-family: calbri;
+}
+
+body{
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--dn-grey);
+}
+
+main{
+    width:23rem;
+    border-radius: 2rem;
+    border:10px solid;
+    background-color: var(--dn-green);
+    padding:2em 2em 0.5em 2em;
+}
+
+.content{
+    width:100%;
+}
+
+.content:not(:nth-child(1)){
+    margin-top:0.5em;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 3em 1fr;
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    color:var(--dn-grey);
+    align-self: center;
+    font-family: calibri;
+}
+
+input{
+    font-size: 22px;
+    font-family: calibri;
+    color:var(--dn-grey);
+    height:50px;
+}
+
+input[type="text"],input[type="email"]{
+    padding-left:0.5em;
+    font-weight: 500;
+    width:100%;
+}
+
+input[type="submit"]{
+    font-size: 22px;
+    font-weight: 500;
+    background-color: var(--dn-pink);
+    border-radius: 0.35em;
+    border:2px solid;
+    padding:0.25em 1.5em;
+}
+
+.bg-valid{
+    background-color: var(--dn-green);
+}
+
+.bg-invalid{
+    background-color: var(--dn-pink);
+}
+
+.hidden{
+    display:none;
+}
+
+.error{
+    padding-top:5px;
+    grid-column-start: 1;
+    grid-column-end:3;
+    color:var(--dn-pink);
+    font-size: 14px;
+}
+
+.p-rel{
+    position: relative;
+}
+
+.valid-card{
+    position:absolute;
+    top:0;
+    right:0;
+    width:120px;
+    height:100%;
+    display:flex;
+    align-items: center;
+}
+
+#card-length{
+    padding-right:0.25em
+}
+
+.img-div{
+    height:90%;
+    width:80px;
+    background-size: 100% 100%;
+}
+
+.img-amex{
+    background-image: url('amex.png');
+}
+
+.img-discover{
+    background-image: url('discover.png');
+}
+
+.img-mcard{
+    background-image: url('mcard.png');
+}
+
+.img-visa{
+    background-image: url('visa.png');
+}

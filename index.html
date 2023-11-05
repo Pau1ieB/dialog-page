@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submission Page</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <main>
+        <form id="form">
+            <div class="content grid">
+                <label for="name">Name:</label>
+                <input id="name" data-valid="zero" type="text" name="name" placeholder="Enter Your Name" pattern="^[A-Za-z ]+$" maxlength="20" required/>
+                <div role="alert" id="error-name" class="error hidden">Please add a valid name as it appears on your credit card, alphabetical characters and spaces only</div>
+            </div>
+            <div class="content grid">
+                <label for="email">Email:</label>
+                <input id="email" data-valid="zero" type="email" name="email" placeholder="Enter Your Email" required/>
+                <div id="error-email" class="error hidden">Please add a valid email address</div>
+            </div>
+            <div class="content grid">
+                <label>Card:</label>
+                <div class="p-rel">
+                    <input id="card" data-valid="zero" type="text" name="card" placeholder="Enter A Proxy Credit Card Number" pattern="^[\d]+$" maxlength="16" required/>
+                    <div id="card-type" data-show="false" class="hidden">
+                        <div id="card-image" class="img-div"></div>
+                        <div id="card-length">16/16</div>
+                    </div>
+                </div>
+                <div role="alert" id="error-card" class="error hidden">Please add a valid Debit or Credit Card number (numerals only, no spaces)</div>
+            </div>
+            <div role="alert" id="error-form" class="error hidden" aria-label=""></div>
+            <div class="content flex">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </main>
+</body>
+</html>
